@@ -1,0 +1,56 @@
+<%-include('partials/header')-%>
+
+<h3 class="title">Home</h3>
+<p class="content"><%=homeStartingContent%> </p>
+
+<!--solution 1- for loop:
+for (var i=0;i<arr.length;i++) {arr[i]}
+
+for (var i=0;i<posts.length;i++) {
+  console.log(posts[i].postTitle);
+};
+-->
+
+
+
+<!--solution 2- array_name.forEach():
+ forEach((element) => { ... } )
+ forEach((element, index) => { ... } )
+ forEach((element, index, array) => { ... } )
+
+ posts.forEach((post) =>{
+ console.log(post.postTitle);
+  });
+-->
+
+
+
+<!--solution 3- array_name.map:
+map((element) => { ... } )
+map((element, index) => { ... } )
+map((element, index, array) => { ... } )
+
+
+forEach() vs. map()
+The map() method creates a same new array that's easy to manipulate
+and is faster-->
+
+
+<!--注意下面的格式：h1 p 分开到两个map里，结果会是标题全部在内容上面
+而如果tag 放在map循环外面，结果会是，标题和内容都挤在一起，正确格式如下:-->
+
+
+<% posts.map((post)=>{ %>
+<h4 > <%= post.postTitle %> </h4>
+<p>
+  <%= post.postBody.substring(0,100)  %>
+  <a href="posts/<%=post.postTitle%>">...read more</a>
+</p>
+
+
+<% }); %>
+
+<!-- truncate a string截取字符串: string.substr(startingindex,length)...substring(startingindex,finishindex)
+substring(0,100)===substr(0,100)-->
+
+<%-include('partials/footer')-%>
