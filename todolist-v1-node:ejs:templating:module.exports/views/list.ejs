@@ -1,0 +1,25 @@
+<%-include('header')-%>
+
+    <div class="box heading">
+      <h1> <%= listTitle %></h1>
+    </div>
+
+
+    <div class="box">
+        <% for(var i=0;i<newListItems.length;i++){ %>
+          <div class="item">
+            <input type="checkbox">
+            <p><%=newListItems[i]%></p>
+          </div>
+        <% } %>
+
+        <form class="item" action="/" method="post">
+          <input type="text" name="newItem" placeholder="new Item" autocomplete="off">
+          <button type="submit" name="list" value=<%= listTitle %>>+</button>
+          <!-- 第二个name 如果也为newList，结果会变成['输入结果'，'']这个样子，为什么呢？ -->
+        </form>
+
+
+    </div>
+
+<%-include('footer')-%>
