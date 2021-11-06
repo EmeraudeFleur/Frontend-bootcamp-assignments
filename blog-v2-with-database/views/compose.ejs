@@ -1,0 +1,26 @@
+<%-include('partials/header')-%>
+<h1>Compose</h1>
+
+<!-- bootstrap class form-control makes the input box long one -->
+<!-- if the submit button is outside of <form>, post won't work. solution:
+  add an id inside form, then add form = "this id" inside <button> -->
+  
+<form action="/compose" method="post">
+  <div class="form-group">
+    <label for="postTitle">Title</label>
+    <input class="form-control" type="text" name="postTitle">
+    <br>
+    <label for="postBody">Post</label>
+    <textarea class="form-control" name="postBody" rows="8"></textarea>
+  </div>
+  <!-- if contained inside div, the button stays close to textbox -->
+  <button class="btn btn-outline-secondary" type="submit" name="button">Publish</button>
+
+</form>
+
+
+
+
+
+
+<%-include('partials/footer')-%>
