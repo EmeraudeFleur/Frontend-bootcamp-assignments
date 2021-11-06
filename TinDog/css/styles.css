@@ -1,0 +1,173 @@
+body{
+  font-family:'Montserrat', sans-serif;
+  text-align: center;
+}
+
+/*  Combine selectors:
+
+1). multiple selectors:      selector1, selector2{ }
+2). hierarchical selectors:  selector1 selector2{ }   左边是parent,右边是child, 计算机从右向左设置，所以 parent 样式会override child样式。
+  eg. tagName .className{ new features}  tagName #idName{}  #idName .className{} 最好 child 是通用样式，运用在多个地方的，parent 是特殊selector,这样精准 重置样式。
+3). combined selectors:      selector1selector2{ }  中间没有空格，两个selector同时选定的内容，这两个selector必须在同一个 element中！
+
+Selector priority:    id > class > tag
+
+*/
+
+
+#title {
+  background-color: #ff4c68;
+  color:#fff;
+  text-align: left;
+}
+
+h1{
+  font-size: 3.5rem;
+  font-family: 'Montserrat-Black', sans-serif;
+  line-height: 1.5;
+}
+h2{
+  font-family:'Montserrat-Bold', sans-serif;
+  line-height: 1.5;
+  font-size: 3rem;
+}
+
+h3{
+  font-family:'Montserrat-Bold', sans-serif;
+}
+
+p{
+  color:#333333;
+  font-size: 1.15rem;
+  font-weight:200;
+}
+
+/* navbar: */
+
+.navbar{
+  padding:0 0 4.5rem;
+}
+.container-fluid{
+  padding: 3% 13%;
+}
+
+.download-button{
+  margin:5% 5% 5% 0;
+}
+.navbar-brand{
+  font-size: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-item{
+  padding:0 18px;
+}
+.nav-link{
+  font-size:1.2rem;
+  font-family: 'Montserrat-Light',sans-serif;
+}
+img{
+  width:60%;
+  transform: rotate(25deg);
+  margin: auto auto -8rem 5rem;
+}
+
+/* media query breakpoints
+design a responsive web app-- 2 directions:laptop page to mobile; mobile page to laptop */
+
+@media (max-width:991px){
+  img{
+    transform: rotate(0);
+    margin:5% auto;
+  }
+  #title{
+    text-align: center;
+  }
+}
+/* 设置居中过后，屏幕变小之后 nav-item 下拉的时候也居中了 */
+
+
+
+/* features */
+
+#features{
+  padding:7% 13% 5%;
+  background-color: #fff;
+  position:relative;
+}
+.icon{
+  color:#ef8172;
+  margin-bottom:1.5rem;
+}
+
+.icon:hover{color:#ff4c68;
+}
+
+.feature-box{
+  padding:5.5%;
+}
+
+  /* testimonials */
+
+#testimonials{
+  background-color: #ef8172;
+  color:#fff;
+}
+.carousel-item{
+  padding:5% 13%;
+}
+.testimonial-image{
+  width:10%;
+  border-radius:100%;
+  transform: none;
+  margin:20px;
+}
+
+.testimonial-text{
+  color: #fff;
+}
+/* press */
+
+#press{
+  background-color: #ef8172;
+  padding-bottom:3%;
+}
+
+.press-logo{
+  margin:30px 20px 50px;
+  transform:none;
+  width:15%;
+}
+
+/* pricing */
+
+#pricing{
+  padding:8% 10%;
+}
+
+.pricing-col{
+  padding:5% 2%;
+}
+
+/* call to action */
+
+#cta{
+  background-color: #ff4c68;
+  padding:7% 13%;
+}
+.cta-heading{
+  color:#fff;
+  font-size: 3.5rem;
+  padding-bottom: 2%;
+}
+
+/* footer */
+
+#footer{
+  background-color: #fff;
+  padding:8% 13% 8%;
+}
+.footer-icon{
+  width: 1.2rem;
+  margin:0 7px 10px;
+}
